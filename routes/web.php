@@ -20,3 +20,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::resource('movies', App\Http\Controllers\MovieController::class);
+Route::resource('casts', App\Http\Controllers\CastController::class);
+Route::resource('movies.comments', App\Http\Controllers\CommentController::class);
+
+Route::post('/movies/{movie:id}/cast_store')->name('movie_cast_store');
+Route::delete('/movies/{movie:id}/casts/{cast:id}')->name('movie_cast_destroy');
