@@ -78,6 +78,7 @@
         <div class="container mt-4">
             @yield('content')
         </div>
+
     </div>
 </body>
 </html>

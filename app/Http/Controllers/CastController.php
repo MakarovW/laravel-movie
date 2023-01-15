@@ -46,7 +46,7 @@ class CastController extends Controller
      */
     public function show(Cast $cast)
     {
-        //
+        return view('casts.show');
     }
 
     /**

@@ -26,14 +26,20 @@
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">Robert Downey, Jr. -
                     <span class="text-muted font-italic">Stark</span>
-                </li>
-                <li class="list-group-item">Chris Evans -
-                    <span class="text-muted font-italic">Captain America</span>
+                    <form action="#" method="POST">
+                        <button type="submit" class="btn btn-link text-danger">Delete</button>
+                    </form>
                 </li>
             </ul>
 
             <h3>Comments</h3>
-            <p>No comments</p>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><b>Valeron: </b> This is really good movies!
+                    <form action="#" method="POST">
+                        <button type="submit" class="btn btn-link text-danger">Delete</button>
+                    </form>
+                </li>
+            </ul>
             <form action="#" method="POST">
                 <input type="text" class="form-control" placeholder="say something">
                 <button type="submit" class="btn btn-primary mt-2 float-end">Comment</button>
