@@ -35,7 +35,16 @@ class CastController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'cast_name'     => 'required',
+            'cast_image'    => 'required'
+        ]);
+
+        Cast::create([
+            'name'  => $request->cast_name,
+            'image' => $request->cast_image,
+        ]);
+        return back();
     }
 
     /**
@@ -46,7 +55,7 @@ class CastController extends Controller
      */
     public function show(Cast $cast)
     {
-        return view('casts.show');
+        return view('casts.show', compact('cast'));
     }
 
     /**
