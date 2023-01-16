@@ -89,6 +89,7 @@ class CastController extends Controller
      */
     public function destroy(Cast $cast)
     {
-        //
+        $cast->delete();
+        return redirect()->route('movies.index');
     }
 }
