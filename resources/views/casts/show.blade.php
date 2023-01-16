@@ -31,7 +31,9 @@
 
 
     <div class="card-footer">
-        <form action="#" method="POST">
+        <form action="{{ route('casts.destroy', $cast->id) }}" method="POST">
+            @csrf
+            @method('delete')
             <button type="submit" class="btn btn-link float-end">Удалить</button>
         </form>
     </div>

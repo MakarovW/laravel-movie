@@ -3,7 +3,9 @@
 @section('content')
     <h1>
         Все фильмы
-        <a href="{{ route('movies.create') }}" class="btn btn-primary btn-sm"><i class="fas fa-plus"></i></a>
+        @auth
+            <a href="{{ route('movies.create') }}" class="btn btn-primary btn-sm"><i class="fas fa-plus"></i></a>
+        @endauth
     </h1>
 
     @unless (count($movies))
